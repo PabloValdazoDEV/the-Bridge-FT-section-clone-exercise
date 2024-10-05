@@ -1,0 +1,299 @@
+*{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #f33540;
+  --secondary-color: #ef3340;
+  --accent-color: #d83334;
+  --background-color: #fff;
+  --text-color-black: #000;
+  --text-color-white: #fff;
+  --hover-img-bootcamp : url(img/deco-bootcamps.png), linear-gradient(rgba(243, 53, 64,0.7), rgba(243, 53, 64, 0.7));
+  --hover-img-master : url(img/deco-master.png), linear-gradient(rgba(243, 53, 64,0.7), rgba(243, 53, 64, 0.7))
+}
+
+.justify-between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+header{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  position: fixed;
+  background-color: white;
+  padding: 1rem 15%;
+  width: 100%;
+  z-index: 20;
+}
+header img{
+  flex: 0;
+}
+nav{
+  grid-column: 2 / 6;
+  text-align: end;
+}
+nav ul {
+  list-style: none;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex: 9;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+
+}
+
+.desplegable::after {
+  content: '';
+  display: inline-block;
+  background-image: url(img/drop-down_8034863.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px; 
+  height: 20px; 
+  vertical-align: middle;
+}
+
+header button {
+  background-color: var(--primary-color) ;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  color:white; 
+  font-size: 13px;
+  padding: 18px 15px; 
+  text-transform: uppercase;
+  cursor: pointer;
+  width: auto;
+
+}
+
+main section:nth-child(1){
+  background-image: url(img/poratadacover-scaled-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 700px;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 0 15%;
+}
+main section:nth-child(1) h1{
+  font-size: 60px;
+  font-weight: 700;
+  padding-right:40% ;
+}
+
+main section:nth-child(1) p{
+  font-size: 20px;
+  font-weight: 700;
+  padding-right:40% ;
+}
+
+main section:nth-child(2), main section:nth-child(3){
+display: flex;
+flex-direction: column;
+align-items: start;
+padding: 1rem 15%;
+gap:20px;
+
+}
+
+main section:nth-child(2){
+  margin-top: 50px
+} 
+main section:nth-child(3){
+  margin-top: 50px; 
+  margin-bottom: 50px;
+}
+
+main section:nth-child(2) h2, main section:nth-child(3) h2{
+  font-size: 30px;
+  font-weight: 800;
+}
+
+main section:nth-child(2) ul, main section:nth-child(3) ul{
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  gap: 15px;
+}
+
+main section:nth-child(2) li, main section:nth-child(3) li{
+  width: 100%;
+ aspect-ratio: 1;
+ display: flex;
+ justify-content: start;
+ align-items: end;
+ padding: 20px;
+ border-radius: 10px;
+ font-size: 16px;
+ font-weight: 700;
+ gap:10px; 
+ color:white;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ transition: 1s ease;
+ cursor: pointer;
+}
+
+main section:nth-child(2) li::before, main section:nth-child(3) li::before{
+  content: "";
+  min-width: 12px;
+  min-height: 16px;
+  background-color: var(--primary-color);
+  margin-bottom: 2px;
+}
+main section:nth-child(3) li::before{
+  margin-bottom: 20px;
+}
+
+/* Preguntar a Ivan */
+
+main section:nth-child(2) ul li:nth-child(1){
+  background-image: url(img/estudiar-data-science-1.png);
+}
+main section:nth-child(2) ul li:nth-child(1):hover{
+  background-image:var(--hover-img-bootcamp), url(img/estudiar-data-science-1.png);
+}
+
+
+main section:nth-child(2) ul li:nth-child(2){
+  background-image: url(img/estudiar-ciberseguridad.png);
+}
+main section:nth-child(2) ul li:nth-child(2):hover{
+  background-image:var(--hover-img-bootcamp), url(img/estudiar-ciberseguridad.png);
+}
+
+
+main section:nth-child(2) ul li:nth-child(3){
+  background-image: url(img/estudiar-programacion-front-end-back.png);
+}
+main section:nth-child(2) ul li:nth-child(3):hover{
+  background-image:var(--hover-img-bootcamp), url(img/estudiar-programacion-front-end-back.png);
+}
+
+
+main section:nth-child(2) ul li:nth-child(4){
+  background-image: url(img/estudiar-diseno-ux-diseno-de-aplicaciones-diseno-web.png);
+}
+main section:nth-child(2) ul li:nth-child(4):hover{
+  background-image:var(--hover-img-bootcamp), url(img/estudiar-diseno-ux-diseno-de-aplicaciones-diseno-web.png);
+}
+
+
+main section:nth-child(2) ul li:nth-child(5){
+  background-image: url(img/estudiar-el-mejor-marketing-digital.png);
+}
+main section:nth-child(2) ul li:nth-child(5):hover{
+  background-image:var(--hover-img-bootcamp), url(img/estudiar-el-mejor-marketing-digital.png);
+}
+
+main section:nth-child(2) ul li:hover::before, main section:nth-child(3) ul li:hover::before{
+  background-color: white;
+}
+
+
+
+main section:nth-child(3) ul li:nth-child(1){
+  background-image: url(img/master-1.jpg);
+}
+main section:nth-child(3) ul li:nth-child(1):hover{
+  background-image:var(--hover-img-master), url(img/master-1.jpg);
+}
+
+main section:nth-child(3) ul li:nth-child(2){
+  background-image: url(img/master-2.jpg);
+}
+main section:nth-child(3) ul li:nth-child(2):hover{
+  background-image:var(--hover-img-master), url(img/master-2.jpg);
+}
+
+
+main section:nth-child(3) ul li:nth-child(3){
+  background-image: url(img/master-3.jpg);
+}
+main section:nth-child(3) ul li:nth-child(3):hover{
+  background-image:var(--hover-img-master), url(img/master-3.jpg);
+}
+
+
+/* Hasta aquí */
+
+main section:nth-child(4){
+  display: grid;
+  flex-direction: column;
+  gap:40px;
+  padding: 5rem 15%;
+  background-color: var(--primary-color);
+}
+main section:nth-child(4) h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color:white
+}
+
+main section:nth-child(4) > div{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:20px  
+}
+
+main section:nth-child(4) article{
+  display: flex;
+  flex-direction: column;
+  padding: 32px 39px;
+  background-color: white;
+  border-radius: 10px;
+  transition: 0.5s;
+  gap:10px;
+  height:430px
+}
+
+main section:nth-child(4) article:hover{
+  transform: translateY(-10px)
+}
+
+main section:nth-child(4) article h3{
+  font-size:22px ;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  gap:10px
+}
+
+main section:nth-child(4) article h3::after{
+  content: "";
+  min-width: 160px;
+  min-height: 10px;
+  max-width: 160px;
+  max-height: 10px;
+  background-color: var(--primary-color);
+  margin-bottom: 2px;
+}
+
+main section:nth-child(4) article p{
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 400;
+}
